@@ -1,0 +1,11 @@
+function test($arr1){
+    $arr2 = [];
+    foreach($arr1 as $key => $val){
+        $arr2[$val['fid']][] = [
+            'tid' => $val['tid'],
+            'name' => $val['name'],
+        ];
+    }
+    return $arr2;
+
+}
