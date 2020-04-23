@@ -1,0 +1,13 @@
+function array_has($array,$key){
+    $arr = explode('.',$key);
+    foreach($arr as $k =>$val){
+        if(array_key_exists($val,$array)){
+            if($val =  end($arr)){
+                return true;
+            }
+            continue;
+        }else{
+            return false;
+        }
+    }
+}
